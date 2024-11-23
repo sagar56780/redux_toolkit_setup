@@ -1,6 +1,7 @@
 const store= require('./App/store');
 const pizzSlice= require('./App/features/pizza/pizzaSlice')
-const action= pizzSlice.actions;
+const pizzaAction= pizzSlice.actions;
+const burgerAction= require('./App/features/burgger/burgerSlice').actions;
 
 
 console.log('initalstate',store.getState().piazza);
@@ -9,11 +10,12 @@ console.log('initalstate',store.getState().piazza);
 store.subscribe(()=>console.log('updated state',store.getState()));
 
 
-store.dispatch(action.pizzaOrder())
-store.dispatch(action.pizzaOrder())
+store.dispatch(pizzaAction.pizzaOrder())
+store.dispatch(pizzaAction.pizzaOrder())
 
-store.dispatch(action.pizzaOrder())
+store.dispatch(pizzaAction.pizzaOrder())
 
-store.dispatch(action.pizzaOrder())
+store.dispatch(pizzaAction.pizzaOrder())
+store.dispatch(burgerAction.orderBurger());
 
 

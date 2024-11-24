@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@reduxjs/toolkit": "^2.3.0"
+    "@reduxjs/toolkit": "^2.3.0",
+    "axios": "^1.7.7"
   }
 }
